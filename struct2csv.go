@@ -90,7 +90,7 @@ type Encoder struct {
 func New() *Encoder {
 	return &Encoder{
 		useTags: true, base: 10, tag: "csv",
-		sepBeg: "(", sepEnd: ")",
+		sepBeg: "", sepEnd: "",
 	}
 }
 
