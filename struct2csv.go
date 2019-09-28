@@ -23,6 +23,7 @@ import (
 	"errors"
 	"fmt"
 	"reflect"
+	"github.com/iancoleman/strcase"
 	"sort"
 	"strconv"
 	"strings"
@@ -184,7 +185,7 @@ func (e *Encoder) getColNames(v interface{}) []string {
 				continue
 			}
 		}
-		cols = append(cols, name)
+		cols = append(cols, strcase.ToSnake(name))
 	}
 	return cols
 }
